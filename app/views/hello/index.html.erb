@@ -1,5 +1,15 @@
 <h1><%= @message %></h1>
 <p>This is a greeting! Hello! I'm talking to you!</p>
 
+<% for i in 1..@count %>
 <p><%= @bonus %></p>
+<% end %>
+
+<% content_for(:list) do %>
+<ol>
+    <% for i in 1..@count %>
+    <li><%= @bonus %></li>
+    <% end %>
+</ol>
+<% end %>
 

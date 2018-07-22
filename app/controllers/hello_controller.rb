@@ -1,5 +1,5 @@
 class HelloController < ApplicationController
-  layout :admin_or_user
+  
   
   def index
     @message="Hello!"
@@ -7,13 +7,5 @@ class HelloController < ApplicationController
     @bonus="This message came from the controller."
   end
   
-  private
-  def admin_or_user
-    if admin_authenticated
-      "admin_screen"
-    else
-      "user_screen"
-    end
-  end
   
 end
